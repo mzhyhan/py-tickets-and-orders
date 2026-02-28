@@ -1,8 +1,10 @@
 from typing import Any
 from django.contrib.auth import get_user_model
 
+
 def get_user(user_id: int) -> Any:
     return get_user_model().objects.get(id=user_id)
+
 
 def create_user(
     username: str,
@@ -19,6 +21,7 @@ def create_user(
         first_name=first_name or "",
         last_name=last_name or "",
     )
+
 
 def update_user(
     user_id: int,
